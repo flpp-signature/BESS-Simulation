@@ -154,7 +154,8 @@ In collaboration with AS "Augstsprieguma tīkls" (Latvian TSO)
 
 ## References
 
-- Baltputnis et al. (2024). *Robust market-based battery energy storage management strategy for operation in European balancing markets.* Journal of Energy Storage, 102, 114082.
+- Baltputnis et al. (2024). *Robust market-based battery energy storage management strategy for operation in European balancing markets.* Journal of Energy Storage, 102, 114082, https://doi.org/10.1016/j.est.2024.114082
+- Paper input data and results: https://doi.org/10.5281/zenodo.18199324
 - `BESS_modela_apraksts_v2_2022-12-20.docx` - Algorithm description (Latvian)
 - `BESS_sim_manual_v2_2022-12-20.docx` - User manual (English)
 
