@@ -139,6 +139,8 @@ The strategy has been validated against:
 - **Realistic scenarios**: Full-year simulations with German (CE) and Finnish (Nordic) frequency data
 - **Sensitivity analysis**: ID GCT varied from 15-105 minutes
 
+⚠️ **TODO:** sort out the information below here.
+
 ## Version History
 
 - **v2.0.0**: Refactored into modular structure
