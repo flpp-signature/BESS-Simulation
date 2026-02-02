@@ -22,7 +22,7 @@ The simulation implements a **worst-case activation anticipation approach** wher
 
 3. **Voluntary FRR Energy Bid Preparation** (in `bess_model.py`): Estimates additional FRR bids using surplus BESS capacity after ensuring worst-case scenario handling. Includes SOC violation subroutine to verify bids don't cause issues in other time periods.
 
-### SOC Management Strategies
+### SOC management strategies
 
 - **Conservative Strategy** (for LER): Takes advantage of lenient criteria for LER FCR providers during alert state. Lower worst-case energy requirements, less active ID trading.
 
@@ -59,7 +59,7 @@ The simulation implements a **worst-case activation anticipation approach** wher
 pip install numpy pandas matplotlib openpyxl
 ```
 
-## Project Structure
+## Project structure
 
 ```
 bess_sim/
@@ -80,14 +80,14 @@ bess_sim/
 
 ## Configuration
 
-### Settings File (settings.xlsx)
+### Settings file (settings.xlsx)
 
 1. **BESS Technical Parameters**: Power ratings, capacity, efficiency, SOC limits, losses
 2. **BESS Simulation Settings**: Initial SOC, LER qualification, availability, SOC management strategy
 3. **Reserve Provision Settings**: FCR/FRR capacity obligations (uniform or per-MTU)
 4. **Market Settings**: GCT timings (ID, FRR), preparation times, frequency parameters (deadband, full activation deviation), ΔTminLER, max recovery time
 
-### Input Files
+### Input files
 
 - **Frequency file**: CSV/Excel with `Time` and `Value` columns (1-second to 1-minute resolution recommended)
 - **FRR activation file**: CSV/Excel with `Start`, `End`, and `MW` columns (positive = up-regulation)
