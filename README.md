@@ -3,6 +3,8 @@
 A Python-based simulation tool for Battery Energy Storage System (BESS) reserve provision, implementing the robust market-based management strategy described in:
 
 > **Baltputnis, K., Broka, Z., Cingels, G., Sīlis, A., & Junghāns, G. (2024).** *Robust market-based battery energy storage management strategy for operation in European balancing markets.* Journal of Energy Storage, 102, 114082. https://doi.org/10.1016/j.est.2024.114082
+>
+> The input and output data concerning this paper is available on Zenodo: https://doi.org/10.5281/zenodo.18199324
 
 The tool supports simultaneous FCR (Frequency Containment Reserve) and aFRR (automatic Frequency Restoration Reserve) market participation with market-based SOC restoration exclusively via the intraday market, fully compliant with EU System Operation Guideline requirements for Limited Energy Reservoirs (LERs).
 
