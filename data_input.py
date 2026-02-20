@@ -135,6 +135,7 @@ class DataLoader:
             time_indexes
         )
         
+	FRR_data['MW'] = FRR_data['MW'].round(1) # fix issues from rounding cascade
         # Fill in activation periods
         for t in range(len(FRR_data)):
             FRR_activ[
