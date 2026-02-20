@@ -1,2 +1,9 @@
 quick-push.bat
 update-project.bat
+quick_push.bat
+quick_pull.bat
+
+*.csv
+*.xlsx
+!settings.xlsx
+!output_template.xlsx
