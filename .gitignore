@@ -7,3 +7,7 @@ quick_pull.bat
 *.xlsx
 !settings.xlsx
 !output_template.xlsx
+
+# output folders and error logs
+*/
+error_log.txt
