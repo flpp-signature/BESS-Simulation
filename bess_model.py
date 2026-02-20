@@ -162,16 +162,16 @@ class BESS:
         
         # Initialize with two days of zeros
         self.en_FRR_up = pd.concat([
-            pd.Series([0] * len(MTUs_24h), MTUs_24h),
-            pd.Series([0] * len(MTUs_24h), MTUs_24h + next_day)
+            pd.Series([0.0] * len(MTUs_24h), MTUs_24h),
+            pd.Series([0.0] * len(MTUs_24h), MTUs_24h + next_day)
         ])
         self.en_FRR_down = pd.concat([
-            pd.Series([0] * len(MTUs_24h), MTUs_24h),
-            pd.Series([0] * len(MTUs_24h), MTUs_24h + next_day)
+            pd.Series([0.0] * len(MTUs_24h), MTUs_24h),
+            pd.Series([0.0] * len(MTUs_24h), MTUs_24h + next_day)
         ])
         self.en_ID = pd.concat([
-            pd.Series([0] * len(MTUs_24h), MTUs_24h),
-            pd.Series([0] * len(MTUs_24h), MTUs_24h + next_day)
+            pd.Series([0.0] * len(MTUs_24h), MTUs_24h),
+            pd.Series([0.0] * len(MTUs_24h), MTUs_24h + next_day)
         ])
         
         # Extend for larger simulation datasets
@@ -179,15 +179,15 @@ class BESS:
             next_day += pd.Timedelta('1 d')
             self.en_FRR_up = pd.concat([
                 self.en_FRR_up, 
-                pd.Series([0] * len(MTUs_24h), MTUs_24h + next_day)
+                pd.Series([0.0] * len(MTUs_24h), MTUs_24h + next_day)
             ])
             self.en_FRR_down = pd.concat([
                 self.en_FRR_down, 
-                pd.Series([0] * len(MTUs_24h), MTUs_24h + next_day)
+                pd.Series([0.0] * len(MTUs_24h), MTUs_24h + next_day)
             ])
             self.en_ID = pd.concat([
                 self.en_ID, 
-                pd.Series([0] * len(MTUs_24h), MTUs_24h + next_day)
+                pd.Series([0.0] * len(MTUs_24h), MTUs_24h + next_day)
             ])
         
         # Resample to working resolution
@@ -224,7 +224,7 @@ class BESS:
                     self.preset_FCR * len(MTUs_24h), MTUs_24h
                 )
         else:
-            cap_FCR_temp = pd.Series([0] * len(MTUs_24h), MTUs_24h)
+            cap_FCR_temp = pd.Series([0.0] * len(MTUs_24h), MTUs_24h)
         
         self.cap_FCR = cap_FCR_temp[start_time <= cap_FCR_temp.index]
         self.cap_FCR = pd.concat([
@@ -275,8 +275,8 @@ class BESS:
                     self.preset_FRR_down * len(MTUs_24h), MTUs_24h
                 )
         else:
-            cap_FRR_up_temp = pd.Series([0] * len(MTUs_24h), MTUs_24h)
-            cap_FRR_down_temp = pd.Series([0] * len(MTUs_24h), MTUs_24h)
+            cap_FRR_up_temp = pd.Series([0.0] * len(MTUs_24h), MTUs_24h)
+            cap_FRR_down_temp = pd.Series([0.0] * len(MTUs_24h), MTUs_24h)
         
         self.cap_FRR_up = cap_FRR_up_temp[
             start_time <= cap_FRR_up_temp.index

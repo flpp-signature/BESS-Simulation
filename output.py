@@ -223,7 +223,7 @@ class Visualizer:
     def _create_step_data(self) -> None:
         """Create step plot arrays."""
         def duplicate_for_step(data):
-            return [sub[item] for item in range(len(self.time_indexes)) for sub in [data, data]]
+            return [sub.iloc[item] for item in range(len(self.time_indexes)) for sub in [data, data]]
         
         self.p_d_ID_1 = duplicate_for_step(self.d_ID_1)
         self.p_d_ID_2 = duplicate_for_step(self.d_ID_2)

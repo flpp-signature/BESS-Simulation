@@ -129,13 +129,17 @@ class DataLoader:
             np.arange(start_time, end_time, working_resolution)
         )
         
-        # Initialize FRR activation series with zeros
+        # Initialize FRR activation series with zeros (float to avoid pandas 2.0
+        # dtype enforcement error when assigning float MW values)
         FRR_activ = pd.Series(
-            [0] * int((end_time - start_time) / working_resolution), 
+            [0.0] * int((end_time - start_time) / working_resolution), 
             time_indexes
         )
         
-        FRR_data['MW'] = FRR_data['MW'].round(1) # fix issues from rounding cascade
+        # Enforce 0.1 MW precision on FRR activation data to match actual
+        # market resolution and avoid rounding cascade in distribution logic
+        FRR_data['MW'] = FRR_data['MW'].round(1)
+        
         # Fill in activation periods
         for t in range(len(FRR_data)):
             FRR_activ[
